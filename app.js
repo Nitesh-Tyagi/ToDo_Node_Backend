@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const auth = require('./config/auth.config.js'); // Import auth middleware
 const app = express();
 const db = require('./config/db.config');
 const userRoutes = require('./routes/userRoutes');
@@ -14,7 +13,7 @@ app.use(express.json());
 // Enable CORS for all requests
 app.use(cors());
 
-// // Use auth middleware for all routes under /api
+// // Use  middleware for all routes under /api
 // app.use('/api', auth);
 
 // Test route
