@@ -1,6 +1,7 @@
 const sql = require("../config/db.config.js");
 
 const Task = function (task) {
+  this.ID = task.ID;
   this.UserID = task.UserID;
   this.Task_title = task.Task_title;
   this.Task_description = task.Task_description;
@@ -8,7 +9,7 @@ const Task = function (task) {
 };
 
 Task.getTasks = (userID, result) => {
-  sql.query(`SELECT Task_title, Create_date FROM Tasks WHERE UserID = ?`, [userID], (err, res) => {
+  sql.query(`SELECT Task_title, Create_date, ID FROM Tasks WHERE UserID = ?`, [userID], (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(err, null);

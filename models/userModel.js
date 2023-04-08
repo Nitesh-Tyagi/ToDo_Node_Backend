@@ -49,7 +49,7 @@ User.findByUsernameAndPassword = (username, password, result) => {
       return;
     }
 
-    console.log("User not found");
+    console.log("User not found",username,password);
     result(null, { ID: -1 });
   });
 };
