@@ -36,4 +36,8 @@ The Databse is made in MySQL, here is the Schema I made for the DB :  <br />
      &emsp;Create_date : date  <br />
   <br />
      &emsp;UserID foreign key from Table Users(ID)  <br />
-  }  <br />
+  }  <br /><br />
+  
+  DB Schema:
+  <br />
+![DB](https://user-images.githubusercontent.com/53448566/231418485-32800fef-b1c6-455e-aa75-1058373dfbe0.jpg)
